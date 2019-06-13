@@ -1,14 +1,11 @@
 package com.lambdaschool.zoos.service;
 
-import com.lambdaschool.zoos.model.Phone;
+import com.lambdaschool.zoos.model.Telephones;
 
 import java.util.ArrayList;
 
 public interface PhoneService
 {
-	ArrayList<Phone> findAll();
-
-
-
+	ArrayList<Telephones> findAll();
 
 }

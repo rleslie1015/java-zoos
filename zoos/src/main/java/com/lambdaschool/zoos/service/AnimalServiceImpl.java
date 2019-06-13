@@ -1,12 +1,23 @@
 package com.lambdaschool.zoos.service;
 
+import com.lambdaschool.zoos.model.Animal;
 import com.lambdaschool.zoos.repository.AnimalRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
 
 @Service(value = "animalService")
 public class AnimalServiceImpl implements AnimalService
 {
 	@Autowired
 	private AnimalRepository animalrepos;
+
+	@Override
+	public ArrayList<Animal> findAll()
+	{
+		ArrayList<Animal> list = new ArrayList<>();
+		animalrepos.findAll().iterator().forEachRemaining(list::add);
+		return list;
+	}
 }

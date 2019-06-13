@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "animal")
+@Table(name = "animals")
 public class Animal
 {
 	@Id
@@ -16,10 +16,7 @@ public class Animal
 
 	private String animaltype;
 ;
-	@ManyToMany
-	@JoinTable(name = "zooanimals",
-			joinColumns = {@JoinColumn(name = "zooid")},
-	inverseJoinColumns = {@JoinColumn(name = "animalid")})
+	@ManyToMany(mappedBy = "animals")
 	@JsonIgnoreProperties("animals")
 	private List<Zoo> zoos = new ArrayList<>();
 

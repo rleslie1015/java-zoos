@@ -6,6 +6,8 @@ import java.util.ArrayList;
 
 public interface ZooService
 {
+//	Zoo save(Zoo zoo);
+
 	ArrayList<Zoo> findAll();
 
 //	ArrayList<CountAnimalsInZoos> getCountAnimalsInZoos();
